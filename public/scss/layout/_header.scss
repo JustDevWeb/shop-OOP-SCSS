@@ -1,0 +1,65 @@
+
+.container {
+    @include container-options;
+}
+
+.header{    
+    background-color: black;
+    padding: 19px 0;
+    
+    .menu-icon{
+        fill: white;
+        &:hover{
+            fill: $maincolor;
+            
+        }
+    }
+    
+        &-flex{
+            display: flex;
+            justify-content: space-between;
+        &__left{
+
+            &_item{
+                text-decoration: none;
+                &:first-child{
+                    margin-right: 41px ;
+                }
+            }
+
+        }
+        &__right{
+            display: flex;
+            align-items: center;
+            &_item{
+                text-decoration: none;
+                
+
+                // &:hover .item-cart__inner{
+                //     display: block;
+                // }
+                &:not(:last-child){
+                    margin-right: 33px;
+                }
+            }
+            .item-cart{  
+                position: relative;                  
+                
+                &__counter{
+                    position: absolute;
+                    background-color: $maincolor;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    top: -7px;
+                    right: -7px;
+
+                }
+
+                
+            }
+        }
+    }
+
+}
+
